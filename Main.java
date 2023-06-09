@@ -87,9 +87,32 @@ public class Main {
                         break;
                     }
                 }
-            
+            } else if (searchChoice.equals("2")) {
+                while (true) {
+                    System.out.print("Enter a number to perform a binary search: ");
+                    if (scanner.hasNextInt()) {
+                        int target = scanner.nextInt();
+                        int index = binarySearch(sortedNumbers, target);
+                        if (index != -1) {
+                            System.out.println("(binary search) Number found at index: " + index);
+                        } else {
+                            System.out.println("Number not found.");
+                        }
+                        break;
+                    } else {
+                        break;
+                    }
+                }
             }
 
-            
+            System.out.print("Do you want to continue? (y/n): ");
+            String choice = scanner.next();
+            if (!choice.equalsIgnoreCase("y")) {
+                break;
+            }
+
+            System.out.print("How many numbers do you want to enter? ");
+            numInputs = scanner.nextInt();
+        }
     }
 }
