@@ -71,7 +71,24 @@ public class Main {
             System.out.print("Enter your choice: ");
             String searchChoice = scanner.next();
 
+            if (searchChoice.equals("1")) {
+                while (true) {
+                    System.out.print("Enter a number to perform a linear search: ");
+                    if (scanner.hasNextInt()) {
+                        int target = scanner.nextInt();
+                        int index = linearSearch(numbers, target);
+                        if (index != -1) {
+                            System.out.println("(linear search) Number found at index: " + index);
+                        } else {
+                            System.out.println("Number not found.");
+                        }
+                        break;
+                    } else {
+                        break;
+                    }
+                }
             
+            }
 
             
     }
