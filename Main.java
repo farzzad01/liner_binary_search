@@ -55,5 +55,24 @@ public class Main {
         System.out.print("How many numbers do you want to enter? ");
         int numInputs = scanner.nextInt();
 
-        
+        while (true) {
+            int[] numbers = new int[numInputs];
+            for (int i = 0; i < numInputs; i++) {
+                System.out.print("Enter a number: ");
+                numbers[i] = scanner.nextInt();
+            }
+
+            int[] sortedNumbers = sortNumbers(numbers);
+            displayNumbers(sortedNumbers);
+
+            System.out.println("Choose search method:");
+            System.out.println("1. Linear search");
+            System.out.println("2. Binary search");
+            System.out.print("Enter your choice: ");
+            String searchChoice = scanner.next();
+
+            
+
+            
+    }
 }
