@@ -28,7 +28,19 @@ public class Main {
         return -1;
     }
 
-    
+    public static int[] sortNumbers(int[] numbers) {
+        int[] sortedNumbers = numbers.clone();
+        for (int i = 0; i < sortedNumbers.length - 1; i++) {
+            for (int j = 0; j < sortedNumbers.length - i - 1; j++) {
+                if (sortedNumbers[j] > sortedNumbers[j + 1]) {
+                    int temp = sortedNumbers[j];
+                    sortedNumbers[j] = sortedNumbers[j + 1];
+                    sortedNumbers[j + 1] = temp;
+                }
+            }
+        }
+        return sortedNumbers;
+    }
 
     
 
